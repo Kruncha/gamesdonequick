@@ -89,18 +89,18 @@ view: all_runs {
   }
 
   measure: earliest_run_start {
-    type: time
+    type: date_raw
     sql: MIN(${start_raw}) ;;
   }
 
-  measure:  last_run_finish {
-    type: time
+  measure: last_run_finish {
+    type: date_raw
     sql: MAX(${end_raw}) ;;
   }
 
   measure: total_number_of_hours {
     type: number
-    sql: TIMESTAMP_DIFF(${last_run_finish_raw}, ${earliest_run_start_raw}, hour) ;;
+    sql: TIMESTAMP_DIFF(${last_run_finish}, ${earliest_run_start}, hour) ;;
   }
 
   measure: cumulative_number_of_hours {

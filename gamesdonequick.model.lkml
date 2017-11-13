@@ -30,9 +30,14 @@ explore: all_donations_2 {
 
 explore: all_donations {
   persist_for: "24 hours"
+  join: all_events {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${all_donations.event} = ${all_events.name} ;;
+  }
   join: all_runs {
     type: inner
-    relationship: many_to_many
+    relationship: many_to_one
     sql_on: ${all_donations.time_received_raw} > ${all_runs.start_raw}
       AND ${all_donations.time_received_raw} < ${all_runs.end_raw} ;;
   }
