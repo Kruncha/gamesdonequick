@@ -1,5 +1,6 @@
 view: all_events {
   derived_table: {
+    persist_for: "24 hours"
     sql: SELECT
       all_donations.event  AS all_donations_event,
       COUNT(DISTINCT all_runs.id ) AS all_runs_count,
@@ -12,6 +13,7 @@ view: all_events {
   }
 
   dimension: name {
+    primary_key: yes
     type: string
     sql: ${TABLE}.all_donations_event ;;
   }

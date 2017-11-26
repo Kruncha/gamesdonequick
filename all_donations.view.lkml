@@ -113,13 +113,11 @@ view: all_donations {
   measure: earliest_time {
     type: date_raw
     sql: MIN(${time_received_raw}) ;;
-    convert_tz: no
   }
 
   measure: latest_time {
     type: date_raw
     sql: MAX(${time_received_raw}) ;;
-    convert_tz: no
   }
 
   measure: number_of_donors {
@@ -131,6 +129,8 @@ view: all_donations {
     type: running_total
     sql: ${number_of_donors} ;;
   }
+
+
 
 
 }

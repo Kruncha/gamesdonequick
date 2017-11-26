@@ -28,6 +28,8 @@ explore: all_donations_2 {
   hidden:  yes
 }
 
+explore: all_donors {}
+
 explore: all_donations {
   persist_for: "24 hours"
   join: all_events {
