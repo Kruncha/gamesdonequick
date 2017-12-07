@@ -17,19 +17,14 @@ view: all_prizes {
     sql: ${TABLE}.contributed_by ;;
   }
 
-  dimension: end_game {
+  dimension: end_game_id {
     type: number
-    sql: ${TABLE}.end_game ;;
+    sql: ${TABLE}.end_game_id ;;
   }
 
   dimension: event {
     type: string
     sql: ${TABLE}.event ;;
-  }
-
-  dimension: image {
-    type: string
-    sql: ${TABLE}.image ;;
   }
 
   dimension: image_link {
@@ -48,9 +43,9 @@ view: all_prizes {
     sql: ${TABLE}.name ;;
   }
 
-  dimension: start_game {
+  dimension: start_game_id {
     type: number
-    sql: ${TABLE}.start_game ;;
+    sql: ${TABLE}.start_game_id ;;
   }
 
   dimension: winner_ids {

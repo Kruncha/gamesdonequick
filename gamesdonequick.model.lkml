@@ -50,7 +50,13 @@ explore: all_donations {
   }
   join: all_prizes {
     type: left_outer
-    relationship: many_to_many
-    sql_on: ${all_runs.id} = ${all_prizes.end_game};;
+    relationship: one_to_many
+    sql_on: ${all_runs.id} = ${all_prizes.end_game_id};;
+  }
+  join: all_runs2 {
+    from:  all_runs
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${all_prizes.start_game_id} = ${all_runs2.id}  ;;
   }
 }
