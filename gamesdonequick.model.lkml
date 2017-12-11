@@ -7,6 +7,7 @@ include: "*.view.lkml"         # include all views in this project
 include: "*.dashboard.lookml"  # include all dashboards in this project
 
 datagroup: test_datagroup {
+  sql_trigger: SELECT 1 ;;
   max_cache_age: "5 minutes"
 }
 
