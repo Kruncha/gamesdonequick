@@ -7,7 +7,7 @@ include: "*.view.lkml"         # include all views in this project
 include: "*.dashboard.lookml"  # include all dashboards in this project
 
 datagroup: test_datagroup {
-  max_cache_age: "5 minute"
+  max_cache_age: "5 minutes"
 }
 
 persist_with: test_datagroup
