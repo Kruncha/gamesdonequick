@@ -1,6 +1,6 @@
 view: all_donations {
   derived_table: {
-    persist_for: "24 hours"
+    sql_trigger_value: SELECT 1 ;;
   sql: (SELECT
       all_donations_1.amount  AS amount,
       all_donations_1.comment  AS comment,
