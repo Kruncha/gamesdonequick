@@ -1,6 +1,6 @@
 view: all_donations {
   derived_table: {
-    sql_trigger_value: SELECT 1 ;;
+    datagroup_trigger: test_datagroup
   sql: (SELECT
       all_donations_1.amount  AS amount,
       all_donations_1.comment  AS comment,

@@ -40,7 +40,6 @@ explore: all_donations_2 {
 explore: all_donors {}
 
 explore: all_donations {
-  persist_for: "24 hours"
   join: all_events {
     type: inner
     relationship: many_to_one
