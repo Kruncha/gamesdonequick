@@ -8,7 +8,7 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 
 datagroup: test_datagroup {
   sql_trigger: SELECT 1 ;;
-#   max_cache_age: "10 minutes"
+  max_cache_age: "10 minutes"
 }
 
 
