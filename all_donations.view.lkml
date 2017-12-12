@@ -1,6 +1,5 @@
 view: all_donations {
   derived_table: {
-    datagroup_trigger: test_datagroup
     sql: (SELECT
       all_donations_1.amount  AS amount,
       all_donations_1.comment  AS comment,
@@ -20,6 +19,7 @@ view: all_donations {
       all_donations_2.id  AS id,
       all_donations_2.time_received AS time_received
     FROM agdq2016.all_donations_2  AS all_donations_2);;
+    datagroup_trigger: test_datagroup
   }
 
   dimension: id {
