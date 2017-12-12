@@ -139,5 +139,4 @@ view: agdq2016 {
   }
 }
 
-persist_with: test_datagroup
 #     html: {{ rendered_value }} || {{ total_amount_donated._rendered_value }};;
