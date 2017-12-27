@@ -107,4 +107,16 @@ view: all_runs {
     type: running_total
     sql: ${total_number_of_hours} ;;
   }
+
+  filter: test_filter {
+    label: "My templated filter"
+    type: string
+    suggest_explore: all_donations
+    suggest_dimension: all_runs.name
+    default_value: "Agdq Pre-Show"
+  }
+  dimension: dynamic_yesno {
+    type: yesno
+    sql: {% condition test_filter %} ${name} {% endcondition %};;
+  }
 }

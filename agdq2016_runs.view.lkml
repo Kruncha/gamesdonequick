@@ -15,6 +15,11 @@ view: agdq2016_runs {
     sql: ${TABLE}.id ;;
   }
 
+  dimension: dynamic_yesno {
+    type: yesno
+    sql: {% condition test_filter %} ${name} {% endcondition %};;
+  }
+
   dimension: bid_wars {
     type: string
     sql: ${TABLE}.bid_wars ;;

@@ -102,6 +102,11 @@ view: agdq2016 {
     tiers: [0,3,6,9,12,15,18,21]
   }
 
+  dimension: test_all_caps {
+    type: string
+    sql: ${TABLE}.TEST_ALL_CAPS ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
