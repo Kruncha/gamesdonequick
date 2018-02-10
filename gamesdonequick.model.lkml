@@ -11,7 +11,6 @@ datagroup: test_datagroup {
   max_cache_age: "10 minutes"
 }
 
-persist_with: test_datagroup
 
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
